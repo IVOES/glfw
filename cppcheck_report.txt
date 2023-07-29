@@ -1,0 +1,1652 @@
+deps/tinycthread.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+deps/tinycthread.c:475:0: information: Skipping configuration 'CLOCK_REALTIME' since the value of 'CLOCK_REALTIME' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (clock_gettime(CLOCK_REALTIME, &now) != 0)
+^
+deps/tinycthread.c:335:9: style: Unused variable: pres [unusedVariable]
+  void *pres;
+        ^
+deps/tinycthread.c:390:3: error: Memory leak: ti [memleak]
+  return thrd_success;
+  ^
+examples/boing.c:312:21: style: The scope of the variable 'dt2' can be reduced. [variableScope]
+   double dt_total, dt2;
+                    ^
+examples/boing.c:386:25: style:inconclusive: Function 'BounceBall' argument 1 names different: declaration 'dt' definition 'delta_t'. [funcArgNamesDifferent]
+void BounceBall( double delta_t )
+                        ^
+examples/boing.c:59:25: note: Function 'BounceBall' argument 1 names different: declaration 'dt' definition 'delta_t'.
+void BounceBall( double dt );
+                        ^
+examples/boing.c:386:25: note: Function 'BounceBall' argument 1 names different: declaration 'dt' definition 'delta_t'.
+void BounceBall( double delta_t )
+                        ^
+examples/gears.c:57:11: style: Local variable 'angle' shadows outer variable [shadowVariable]
+  GLfloat angle, da;
+          ^
+examples/gears.c:172:16: note: Shadowed declaration
+static GLfloat angle = 0.f;
+               ^
+examples/gears.c:57:11: note: Shadow variable
+  GLfloat angle, da;
+          ^
+examples/heightmap.c:129:10: style: The scope of the variable 'info_log' can be reduced. [variableScope]
+    char info_log[8192];
+         ^
+examples/heightmap.c:158:10: style: The scope of the variable 'info_log' can be reduced. [variableScope]
+    char info_log[8192];
+         ^
+examples/heightmap.c:405:12: style: The scope of the variable 'dt' can be reduced. [variableScope]
+    double dt;
+           ^
+examples/heightmap.c:156:28: style: Variable 'fragment_shader' is assigned a value that is never used. [unreadVariable]
+    GLuint fragment_shader = 0u;
+                           ^
+examples/offscreen.c:41:11: style: struct member 'Anonymous0::x' is never used. [unusedStructMember]
+    float x, y;
+          ^
+examples/offscreen.c:41:14: style: struct member 'Anonymous0::y' is never used. [unusedStructMember]
+    float x, y;
+             ^
+examples/offscreen.c:42:11: style: struct member 'Anonymous0::r' is never used. [unusedStructMember]
+    float r, g, b;
+          ^
+examples/offscreen.c:42:14: style: struct member 'Anonymous0::g' is never used. [unusedStructMember]
+    float r, g, b;
+             ^
+examples/offscreen.c:42:17: style: struct member 'Anonymous0::b' is never used. [unusedStructMember]
+    float r, g, b;
+                ^
+examples/particles.c:493:31: error: The address of local variable 'rgba' is accessed at non-zero index. [objectIndex]
+            ((GLubyte*) &rgba)[1] = (GLubyte)(pptr->g * 255.f);
+                              ^
+examples/particles.c:493:25: note: Address of variable taken here.
+            ((GLubyte*) &rgba)[1] = (GLubyte)(pptr->g * 255.f);
+                        ^
+examples/particles.c:493:31: note: The address of local variable 'rgba' is accessed at non-zero index.
+            ((GLubyte*) &rgba)[1] = (GLubyte)(pptr->g * 255.f);
+                              ^
+examples/particles.c:494:31: error: The address of local variable 'rgba' is accessed at non-zero index. [objectIndex]
+            ((GLubyte*) &rgba)[2] = (GLubyte)(pptr->b * 255.f);
+                              ^
+examples/particles.c:494:25: note: Address of variable taken here.
+            ((GLubyte*) &rgba)[2] = (GLubyte)(pptr->b * 255.f);
+                        ^
+examples/particles.c:494:31: note: The address of local variable 'rgba' is accessed at non-zero index.
+            ((GLubyte*) &rgba)[2] = (GLubyte)(pptr->b * 255.f);
+                              ^
+examples/particles.c:495:31: error: The address of local variable 'rgba' is accessed at non-zero index. [objectIndex]
+            ((GLubyte*) &rgba)[3] = (GLubyte)(alpha * 255.f);
+                              ^
+examples/particles.c:495:25: note: Address of variable taken here.
+            ((GLubyte*) &rgba)[3] = (GLubyte)(alpha * 255.f);
+                        ^
+examples/particles.c:495:31: note: The address of local variable 'rgba' is accessed at non-zero index.
+            ((GLubyte*) &rgba)[3] = (GLubyte)(alpha * 255.f);
+                              ^
+examples/particles.c:350:11: style: The scope of the variable 'dt2' can be reduced. [variableScope]
+    float dt2;
+          ^
+examples/particles.c:608:12: style: The scope of the variable 'angle' can be reduced. [variableScope]
+    double angle;
+           ^
+examples/particles.c:609:12: style: The scope of the variable 'x' can be reduced. [variableScope]
+    float  x, y;
+           ^
+examples/particles.c:609:15: style: The scope of the variable 'y' can be reduced. [variableScope]
+    float  x, y;
+              ^
+examples/particles.c:610:9: style: The scope of the variable 'm' can be reduced. [variableScope]
+    int m, n;
+        ^
+examples/particles.c:610:12: style: The scope of the variable 'n' can be reduced. [variableScope]
+    int m, n;
+           ^
+examples/splitview.c:63:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int    i, j, k;
+           ^
+examples/splitview.c:63:15: style: The scope of the variable 'j' can be reduced. [variableScope]
+    int    i, j, k;
+              ^
+examples/splitview.c:63:18: style: The scope of the variable 'k' can be reduced. [variableScope]
+    int    i, j, k;
+                 ^
+examples/splitview.c:64:12: style: The scope of the variable 's' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+           ^
+examples/splitview.c:64:15: style: The scope of the variable 't' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+              ^
+examples/splitview.c:64:18: style: The scope of the variable 'x' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                 ^
+examples/splitview.c:64:21: style: The scope of the variable 'y' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                    ^
+examples/splitview.c:64:24: style: The scope of the variable 'z' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                       ^
+examples/splitview.c:64:27: style: The scope of the variable 'nx' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                          ^
+examples/splitview.c:64:31: style: The scope of the variable 'ny' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                              ^
+examples/splitview.c:64:35: style: The scope of the variable 'nz' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                                  ^
+examples/splitview.c:64:39: style: The scope of the variable 'scale' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                                      ^
+examples/splitview.c:64:46: style: The scope of the variable 'twopi' can be reduced. [variableScope]
+    double s, t, x, y, z, nx, ny, nz, scale, twopi;
+                                             ^
+examples/wave.c:395:12: style: The scope of the variable 't' can be reduced. [variableScope]
+    double t, dt_total, t_old;
+           ^
+examples/wave.c:395:15: style: The scope of the variable 'dt_total' can be reduced. [variableScope]
+    double t, dt_total, t_old;
+              ^
+examples/wave.c:73:15: style: Local variable 'p' shadows outer variable [shadowVariable]
+    int x, y, p;
+              ^
+examples/wave.c:111:8: note: Shadowed declaration
+double p[GRIDW][GRIDH];
+       ^
+examples/wave.c:73:15: note: Shadow variable
+    int x, y, p;
+              ^
+src/cocoa_time.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/internal.h:106:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef void (APIENTRY * PFNGLCLEARPROC)(GLbitfield);
+^
+src/internal.h:107:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef const GLubyte* (APIENTRY * PFNGLGETSTRINGPROC)(GLenum);
+^
+src/internal.h:108:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef void (APIENTRY * PFNGLGETINTEGERVPROC)(GLenum,GLint*);
+^
+src/internal.h:109:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef const GLubyte* (APIENTRY * PFNGLGETSTRINGIPROC)(GLenum,GLuint);
+^
+src/internal.h:255:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef OSMesaContext (GLAPIENTRY * PFN_OSMesaCreateContextExt)(GLenum,GLint,GLint,GLint,OSMesaContext);
+^
+src/internal.h:256:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef OSMesaContext (GLAPIENTRY * PFN_OSMesaCreateContextAttribs)(const int*,OSMesaContext);
+^
+src/internal.h:257:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef void (GLAPIENTRY * PFN_OSMesaDestroyContext)(OSMesaContext);
+^
+src/internal.h:258:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef int (GLAPIENTRY * PFN_OSMesaMakeCurrent)(OSMesaContext,void*,int,int,int);
+^
+src/internal.h:259:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef int (GLAPIENTRY * PFN_OSMesaGetColorBuffer)(OSMesaContext,int*,int*,int*,void**);
+^
+src/internal.h:260:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef int (GLAPIENTRY * PFN_OSMesaGetDepthBuffer)(OSMesaContext,int*,int*,int*,void**);
+^
+src/internal.h:261:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef GLFWglproc (GLAPIENTRY * PFN_OSMesaGetProcAddress)(const char*);
+^
+src/internal.h:325:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef void (APIENTRY * PFN_vkVoidFunction)(void);
+^
+src/internal.h:327:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef PFN_vkVoidFunction (APIENTRY * PFN_vkGetInstanceProcAddr)(VkInstance,const char*);
+^
+src/internal.h:328:0: information: Skipping configuration 'APIENTRY' since the value of 'APIENTRY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef VkResult (APIENTRY * PFN_vkEnumerateInstanceExtensionProperties)(const char*,uint32_t*,VkExtensionProperties*);
+^
+src/context.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/context.c:763:5: portability: Returning an integer in a function with pointer return type is not portable. [CastIntegerToAddressAtReturn]
+    return window->context.getProcAddress(procname);
+    ^
+src/context.c:616:49: style:inconclusive: Function 'glfwMakeContextCurrent' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwMakeContextCurrent(GLFWwindow* handle)
+                                                ^
+include/GLFW/glfw3.h:5994:49: note: Function 'glfwMakeContextCurrent' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwMakeContextCurrent(GLFWwindow* window);
+                                                ^
+src/context.c:616:49: note: Function 'glfwMakeContextCurrent' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwMakeContextCurrent(GLFWwindow* handle)
+                                                ^
+src/context.c:648:42: style:inconclusive: Function 'glfwSwapBuffers' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSwapBuffers(GLFWwindow* handle)
+                                         ^
+include/GLFW/glfw3.h:6049:42: note: Function 'glfwSwapBuffers' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSwapBuffers(GLFWwindow* window);
+                                         ^
+src/context.c:648:42: note: Function 'glfwSwapBuffers' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSwapBuffers(GLFWwindow* handle)
+                                         ^
+src/egl_context.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 49 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/egl_context.c:323:5: portability: Returning an integer in a function with pointer return type is not portable. [CastIntegerToAddressAtReturn]
+    return eglGetProcAddress(procname);
+    ^
+src/egl_context.c:368:0: information: Skipping configuration '_GLFW_EGL_LIBRARY' since the value of '_GLFW_EGL_LIBRARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        _GLFW_EGL_LIBRARY,
+^
+src/egl_context.c:743:0: information: Skipping configuration '_GLFW_GLESV1_LIBRARY' since the value of '_GLFW_GLESV1_LIBRARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            _GLFW_GLESV1_LIBRARY,
+^
+src/egl_context.c:760:0: information: Skipping configuration '_GLFW_GLESV2_LIBRARY' since the value of '_GLFW_GLESV2_LIBRARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            _GLFW_GLESV2_LIBRARY,
+^
+src/glx_context.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 46 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/glx_context.c:264:0: information: Skipping configuration '_GLFW_GLX_LIBRARY;_GLFW_X11' since the value of '_GLFW_GLX_LIBRARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        _GLFW_GLX_LIBRARY,
+^
+src/init.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/init.c:297:27: style:inconclusive: Function '_glfw_realloc' argument 1 names different: declaration 'pointer' definition 'block'. [funcArgNamesDifferent]
+void* _glfw_realloc(void* block, size_t size)
+                          ^
+src/internal.h:1010:27: note: Function '_glfw_realloc' argument 1 names different: declaration 'pointer' definition 'block'.
+void* _glfw_realloc(void* pointer, size_t size);
+                          ^
+src/init.c:297:27: note: Function '_glfw_realloc' argument 1 names different: declaration 'pointer' definition 'block'.
+void* _glfw_realloc(void* block, size_t size)
+                          ^
+src/init.c:319:23: style:inconclusive: Function '_glfw_free' argument 1 names different: declaration 'pointer' definition 'block'. [funcArgNamesDifferent]
+void _glfw_free(void* block)
+                      ^
+src/internal.h:1011:23: note: Function '_glfw_free' argument 1 names different: declaration 'pointer' definition 'block'.
+void _glfw_free(void* pointer);
+                      ^
+src/init.c:319:23: note: Function '_glfw_free' argument 1 names different: declaration 'pointer' definition 'block'.
+void _glfw_free(void* block)
+                      ^
+src/init.c:546:56: style:inconclusive: Function 'glfwSetErrorCallback' argument 1 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWerrorfun glfwSetErrorCallback(GLFWerrorfun cbfun)
+                                                       ^
+include/GLFW/glfw3.h:2439:56: note: Function 'glfwSetErrorCallback' argument 1 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWerrorfun glfwSetErrorCallback(GLFWerrorfun callback);
+                                                       ^
+src/init.c:546:56: note: Function 'glfwSetErrorCallback' argument 1 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWerrorfun glfwSetErrorCallback(GLFWerrorfun cbfun)
+                                                       ^
+src/input.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/input.c:406:66: style:inconclusive: Function '_glfwInputDrop' argument 3 names different: declaration 'names' definition 'paths'. [funcArgNamesDifferent]
+void _glfwInputDrop(_GLFWwindow* window, int count, const char** paths)
+                                                                 ^
+src/internal.h:929:66: note: Function '_glfwInputDrop' argument 3 names different: declaration 'names' definition 'paths'.
+void _glfwInputDrop(_GLFWwindow* window, int count, const char** names);
+                                                                 ^
+src/input.c:406:66: note: Function '_glfwInputDrop' argument 3 names different: declaration 'names' definition 'paths'.
+void _glfwInputDrop(_GLFWwindow* window, int count, const char** paths)
+                                                                 ^
+src/input.c:561:42: style:inconclusive: Function 'glfwGetInputMode' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI int glfwGetInputMode(GLFWwindow* handle, int mode)
+                                         ^
+include/GLFW/glfw3.h:4576:42: note: Function 'glfwGetInputMode' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetInputMode(GLFWwindow* window, int mode);
+                                         ^
+src/input.c:561:42: note: Function 'glfwGetInputMode' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetInputMode(GLFWwindow* handle, int mode)
+                                         ^
+src/input.c:586:43: style:inconclusive: Function 'glfwSetInputMode' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetInputMode(GLFWwindow* handle, int mode, int value)
+                                          ^
+include/GLFW/glfw3.h:4641:43: note: Function 'glfwSetInputMode' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetInputMode(GLFWwindow* window, int mode, int value);
+                                          ^
+src/input.c:586:43: note: Function 'glfwSetInputMode' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetInputMode(GLFWwindow* handle, int mode, int value)
+                                          ^
+src/input.c:730:36: style:inconclusive: Function 'glfwGetKey' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI int glfwGetKey(GLFWwindow* handle, int key)
+                                   ^
+include/GLFW/glfw3.h:4801:36: note: Function 'glfwGetKey' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetKey(GLFWwindow* window, int key);
+                                   ^
+src/input.c:730:36: note: Function 'glfwGetKey' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetKey(GLFWwindow* handle, int key)
+                                   ^
+src/input.c:753:44: style:inconclusive: Function 'glfwGetMouseButton' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI int glfwGetMouseButton(GLFWwindow* handle, int button)
+                                           ^
+include/GLFW/glfw3.h:4830:44: note: Function 'glfwGetMouseButton' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetMouseButton(GLFWwindow* window, int button);
+                                           ^
+src/input.c:753:44: note: Function 'glfwGetMouseButton' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetMouseButton(GLFWwindow* handle, int button)
+                                           ^
+src/input.c:776:43: style:inconclusive: Function 'glfwGetCursorPos' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetCursorPos(GLFWwindow* handle, double* xpos, double* ypos)
+                                          ^
+include/GLFW/glfw3.h:4868:43: note: Function 'glfwGetCursorPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetCursorPos(GLFWwindow* window, double* xpos, double* ypos);
+                                          ^
+src/input.c:776:43: note: Function 'glfwGetCursorPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetCursorPos(GLFWwindow* handle, double* xpos, double* ypos)
+                                          ^
+src/input.c:799:43: style:inconclusive: Function 'glfwSetCursorPos' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetCursorPos(GLFWwindow* handle, double xpos, double ypos)
+                                          ^
+include/GLFW/glfw3.h:4908:43: note: Function 'glfwSetCursorPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetCursorPos(GLFWwindow* window, double xpos, double ypos);
+                                          ^
+src/input.c:799:43: note: Function 'glfwSetCursorPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetCursorPos(GLFWwindow* handle, double xpos, double ypos)
+                                          ^
+src/input.c:893:44: style:inconclusive: Function 'glfwDestroyCursor' argument 1 names different: declaration 'cursor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwDestroyCursor(GLFWcursor* handle)
+                                           ^
+include/GLFW/glfw3.h:5021:44: note: Function 'glfwDestroyCursor' argument 1 names different: declaration 'cursor' definition 'handle'.
+GLFWAPI void glfwDestroyCursor(GLFWcursor* cursor);
+                                           ^
+src/input.c:893:44: note: Function 'glfwDestroyCursor' argument 1 names different: declaration 'cursor' definition 'handle'.
+GLFWAPI void glfwDestroyCursor(GLFWcursor* handle)
+                                           ^
+src/input.c:928:40: style:inconclusive: Function 'glfwSetCursor' argument 1 names different: declaration 'window' definition 'windowHandle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetCursor(GLFWwindow* windowHandle, GLFWcursor* cursorHandle)
+                                       ^
+include/GLFW/glfw3.h:5048:40: note: Function 'glfwSetCursor' argument 1 names different: declaration 'window' definition 'windowHandle'.
+GLFWAPI void glfwSetCursor(GLFWwindow* window, GLFWcursor* cursor);
+                                       ^
+src/input.c:928:40: note: Function 'glfwSetCursor' argument 1 names different: declaration 'window' definition 'windowHandle'.
+GLFWAPI void glfwSetCursor(GLFWwindow* windowHandle, GLFWcursor* cursorHandle)
+                                       ^
+src/input.c:928:66: style:inconclusive: Function 'glfwSetCursor' argument 2 names different: declaration 'cursor' definition 'cursorHandle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetCursor(GLFWwindow* windowHandle, GLFWcursor* cursorHandle)
+                                                                 ^
+include/GLFW/glfw3.h:5048:60: note: Function 'glfwSetCursor' argument 2 names different: declaration 'cursor' definition 'cursorHandle'.
+GLFWAPI void glfwSetCursor(GLFWwindow* window, GLFWcursor* cursor);
+                                                           ^
+src/input.c:928:66: note: Function 'glfwSetCursor' argument 2 names different: declaration 'cursor' definition 'cursorHandle'.
+GLFWAPI void glfwSetCursor(GLFWwindow* windowHandle, GLFWcursor* cursorHandle)
+                                                                 ^
+src/input.c:941:51: style:inconclusive: Function 'glfwSetKeyCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* handle, GLFWkeyfun cbfun)
+                                                  ^
+include/GLFW/glfw3.h:5098:51: note: Function 'glfwSetKeyCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* window, GLFWkeyfun callback);
+                                                  ^
+src/input.c:941:51: note: Function 'glfwSetKeyCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* handle, GLFWkeyfun cbfun)
+                                                  ^
+src/input.c:941:70: style:inconclusive: Function 'glfwSetKeyCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* handle, GLFWkeyfun cbfun)
+                                                                     ^
+include/GLFW/glfw3.h:5098:70: note: Function 'glfwSetKeyCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* window, GLFWkeyfun callback);
+                                                                     ^
+src/input.c:941:70: note: Function 'glfwSetKeyCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* handle, GLFWkeyfun cbfun)
+                                                                     ^
+src/input.c:951:53: style:inconclusive: Function 'glfwSetCharCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* handle, GLFWcharfun cbfun)
+                                                    ^
+include/GLFW/glfw3.h:5141:53: note: Function 'glfwSetCharCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* window, GLFWcharfun callback);
+                                                    ^
+src/input.c:951:53: note: Function 'glfwSetCharCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* handle, GLFWcharfun cbfun)
+                                                    ^
+src/input.c:951:73: style:inconclusive: Function 'glfwSetCharCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* handle, GLFWcharfun cbfun)
+                                                                        ^
+include/GLFW/glfw3.h:5141:73: note: Function 'glfwSetCharCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* window, GLFWcharfun callback);
+                                                                        ^
+src/input.c:951:73: note: Function 'glfwSetCharCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* handle, GLFWcharfun cbfun)
+                                                                        ^
+src/input.c:961:61: style:inconclusive: Function 'glfwSetCharModsCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* handle, GLFWcharmodsfun cbfun)
+                                                            ^
+include/GLFW/glfw3.h:5183:61: note: Function 'glfwSetCharModsCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* window, GLFWcharmodsfun callback);
+                                                            ^
+src/input.c:961:61: note: Function 'glfwSetCharModsCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* handle, GLFWcharmodsfun cbfun)
+                                                            ^
+src/input.c:961:85: style:inconclusive: Function 'glfwSetCharModsCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* handle, GLFWcharmodsfun cbfun)
+                                                                                    ^
+include/GLFW/glfw3.h:5183:85: note: Function 'glfwSetCharModsCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* window, GLFWcharmodsfun callback);
+                                                                                    ^
+src/input.c:961:85: note: Function 'glfwSetCharModsCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* handle, GLFWcharmodsfun cbfun)
+                                                                                    ^
+src/input.c:971:67: style:inconclusive: Function 'glfwSetMouseButtonCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* handle,
+                                                                  ^
+include/GLFW/glfw3.h:5220:67: note: Function 'glfwSetMouseButtonCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* window, GLFWmousebuttonfun callback);
+                                                                  ^
+src/input.c:971:67: note: Function 'glfwSetMouseButtonCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* handle,
+                                                                  ^
+src/input.c:972:74: style:inconclusive: Function 'glfwSetMouseButtonCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                      GLFWmousebuttonfun cbfun)
+                                                                         ^
+include/GLFW/glfw3.h:5220:94: note: Function 'glfwSetMouseButtonCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* window, GLFWmousebuttonfun callback);
+                                                                                             ^
+src/input.c:972:74: note: Function 'glfwSetMouseButtonCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                      GLFWmousebuttonfun cbfun)
+                                                                         ^
+src/input.c:982:63: style:inconclusive: Function 'glfwSetCursorPosCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* handle,
+                                                              ^
+include/GLFW/glfw3.h:5252:63: note: Function 'glfwSetCursorPosCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* window, GLFWcursorposfun callback);
+                                                              ^
+src/input.c:982:63: note: Function 'glfwSetCursorPosCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* handle,
+                                                              ^
+src/input.c:983:68: style:inconclusive: Function 'glfwSetCursorPosCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                  GLFWcursorposfun cbfun)
+                                                                   ^
+include/GLFW/glfw3.h:5252:88: note: Function 'glfwSetCursorPosCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* window, GLFWcursorposfun callback);
+                                                                                       ^
+src/input.c:983:68: note: Function 'glfwSetCursorPosCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                  GLFWcursorposfun cbfun)
+                                                                   ^
+src/input.c:993:67: style:inconclusive: Function 'glfwSetCursorEnterCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* handle,
+                                                                  ^
+include/GLFW/glfw3.h:5283:67: note: Function 'glfwSetCursorEnterCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* window, GLFWcursorenterfun callback);
+                                                                  ^
+src/input.c:993:67: note: Function 'glfwSetCursorEnterCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* handle,
+                                                                  ^
+src/input.c:994:74: style:inconclusive: Function 'glfwSetCursorEnterCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                      GLFWcursorenterfun cbfun)
+                                                                         ^
+include/GLFW/glfw3.h:5283:94: note: Function 'glfwSetCursorEnterCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* window, GLFWcursorenterfun callback);
+                                                                                             ^
+src/input.c:994:74: note: Function 'glfwSetCursorEnterCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                      GLFWcursorenterfun cbfun)
+                                                                         ^
+src/input.c:1004:57: style:inconclusive: Function 'glfwSetScrollCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWscrollfun glfwSetScrollCallback(GLFWwindow* handle,
+                                                        ^
+include/GLFW/glfw3.h:5317:57: note: Function 'glfwSetScrollCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWscrollfun glfwSetScrollCallback(GLFWwindow* window, GLFWscrollfun callback);
+                                                        ^
+src/input.c:1004:57: note: Function 'glfwSetScrollCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWscrollfun glfwSetScrollCallback(GLFWwindow* handle,
+                                                        ^
+src/input.c:1005:59: style:inconclusive: Function 'glfwSetScrollCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                            GLFWscrollfun cbfun)
+                                                          ^
+include/GLFW/glfw3.h:5317:79: note: Function 'glfwSetScrollCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWscrollfun glfwSetScrollCallback(GLFWwindow* window, GLFWscrollfun callback);
+                                                                              ^
+src/input.c:1005:59: note: Function 'glfwSetScrollCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                            GLFWscrollfun cbfun)
+                                                          ^
+src/input.c:1015:53: style:inconclusive: Function 'glfwSetDropCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWdropfun glfwSetDropCallback(GLFWwindow* handle, GLFWdropfun cbfun)
+                                                    ^
+include/GLFW/glfw3.h:5354:53: note: Function 'glfwSetDropCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWdropfun glfwSetDropCallback(GLFWwindow* window, GLFWdropfun callback);
+                                                    ^
+src/input.c:1015:53: note: Function 'glfwSetDropCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWdropfun glfwSetDropCallback(GLFWwindow* handle, GLFWdropfun cbfun)
+                                                    ^
+src/input.c:1015:73: style:inconclusive: Function 'glfwSetDropCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWdropfun glfwSetDropCallback(GLFWwindow* handle, GLFWdropfun cbfun)
+                                                                        ^
+include/GLFW/glfw3.h:5354:73: note: Function 'glfwSetDropCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWdropfun glfwSetDropCallback(GLFWwindow* window, GLFWdropfun callback);
+                                                                        ^
+src/input.c:1015:73: note: Function 'glfwSetDropCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWdropfun glfwSetDropCallback(GLFWwindow* handle, GLFWdropfun cbfun)
+                                                                        ^
+src/input.c:1238:65: style:inconclusive: Function 'glfwSetJoystickCallback' argument 1 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWjoystickfun glfwSetJoystickCallback(GLFWjoystickfun cbfun)
+                                                                ^
+include/GLFW/glfw3.h:5695:65: note: Function 'glfwSetJoystickCallback' argument 1 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWjoystickfun glfwSetJoystickCallback(GLFWjoystickfun callback);
+                                                                ^
+src/input.c:1238:65: note: Function 'glfwSetJoystickCallback' argument 1 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWjoystickfun glfwSetJoystickCallback(GLFWjoystickfun cbfun)
+                                                                ^
+src/input.c:1454:49: style:inconclusive: Function 'glfwSetClipboardString' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetClipboardString(GLFWwindow* handle, const char* string)
+                                                ^
+include/GLFW/glfw3.h:5824:49: note: Function 'glfwSetClipboardString' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetClipboardString(GLFWwindow* window, const char* string);
+                                                ^
+src/input.c:1454:49: note: Function 'glfwSetClipboardString' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetClipboardString(GLFWwindow* handle, const char* string)
+                                                ^
+src/input.c:1462:56: style:inconclusive: Function 'glfwGetClipboardString' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI const char* glfwGetClipboardString(GLFWwindow* handle)
+                                                       ^
+include/GLFW/glfw3.h:5854:56: note: Function 'glfwGetClipboardString' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI const char* glfwGetClipboardString(GLFWwindow* window);
+                                                       ^
+src/input.c:1462:56: note: Function 'glfwGetClipboardString' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI const char* glfwGetClipboardString(GLFWwindow* handle)
+                                                       ^
+src/linux_joystick.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/monitor.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/monitor.c:227:18: style: The scope of the variable 'sizeDiff' can be reduced. [variableScope]
+    unsigned int sizeDiff, leastSizeDiff = UINT_MAX;
+                 ^
+src/monitor.c:229:18: style: The scope of the variable 'colorDiff' can be reduced. [variableScope]
+    unsigned int colorDiff, leastColorDiff = UINT_MAX;
+                 ^
+src/monitor.c:532:20: style: Checking if unsigned expression 'ramp->size' is less than zero. [unsignedLessThanZero]
+    if (ramp->size <= 0)
+                   ^
+src/monitor.c:275:47: style:inconclusive: Function '_glfwCompareVideoModes' argument 1 names different: declaration 'first' definition 'fm'. [funcArgNamesDifferent]
+int _glfwCompareVideoModes(const GLFWvidmode* fm, const GLFWvidmode* sm)
+                                              ^
+src/internal.h:962:47: note: Function '_glfwCompareVideoModes' argument 1 names different: declaration 'first' definition 'fm'.
+int _glfwCompareVideoModes(const GLFWvidmode* first, const GLFWvidmode* second);
+                                              ^
+src/monitor.c:275:47: note: Function '_glfwCompareVideoModes' argument 1 names different: declaration 'first' definition 'fm'.
+int _glfwCompareVideoModes(const GLFWvidmode* fm, const GLFWvidmode* sm)
+                                              ^
+src/monitor.c:275:70: style:inconclusive: Function '_glfwCompareVideoModes' argument 2 names different: declaration 'second' definition 'sm'. [funcArgNamesDifferent]
+int _glfwCompareVideoModes(const GLFWvidmode* fm, const GLFWvidmode* sm)
+                                                                     ^
+src/internal.h:962:73: note: Function '_glfwCompareVideoModes' argument 2 names different: declaration 'second' definition 'sm'.
+int _glfwCompareVideoModes(const GLFWvidmode* first, const GLFWvidmode* second);
+                                                                        ^
+src/monitor.c:275:70: note: Function '_glfwCompareVideoModes' argument 2 names different: declaration 'second' definition 'sm'.
+int _glfwCompareVideoModes(const GLFWvidmode* fm, const GLFWvidmode* sm)
+                                                                     ^
+src/monitor.c:328:45: style:inconclusive: Function 'glfwGetMonitorPos' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetMonitorPos(GLFWmonitor* handle, int* xpos, int* ypos)
+                                            ^
+include/GLFW/glfw3.h:2562:45: note: Function 'glfwGetMonitorPos' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorPos(GLFWmonitor* monitor, int* xpos, int* ypos);
+                                            ^
+src/monitor.c:328:45: note: Function 'glfwGetMonitorPos' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorPos(GLFWmonitor* handle, int* xpos, int* ypos)
+                                            ^
+src/monitor.c:343:50: style:inconclusive: Function 'glfwGetMonitorWorkarea' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetMonitorWorkarea(GLFWmonitor* handle,
+                                                 ^
+include/GLFW/glfw3.h:2593:50: note: Function 'glfwGetMonitorWorkarea' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorWorkarea(GLFWmonitor* monitor, int* xpos, int* ypos, int* width, int* height);
+                                                 ^
+src/monitor.c:343:50: note: Function 'glfwGetMonitorWorkarea' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorWorkarea(GLFWmonitor* handle,
+                                                 ^
+src/monitor.c:364:54: style:inconclusive: Function 'glfwGetMonitorPhysicalSize' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetMonitorPhysicalSize(GLFWmonitor* handle, int* widthMM, int* heightMM)
+                                                     ^
+include/GLFW/glfw3.h:2627:54: note: Function 'glfwGetMonitorPhysicalSize' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorPhysicalSize(GLFWmonitor* monitor, int* widthMM, int* heightMM);
+                                                     ^
+src/monitor.c:364:54: note: Function 'glfwGetMonitorPhysicalSize' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorPhysicalSize(GLFWmonitor* handle, int* widthMM, int* heightMM)
+                                                     ^
+src/monitor.c:382:54: style:inconclusive: Function 'glfwGetMonitorContentScale' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetMonitorContentScale(GLFWmonitor* handle,
+                                                     ^
+include/GLFW/glfw3.h:2659:54: note: Function 'glfwGetMonitorContentScale' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorContentScale(GLFWmonitor* monitor, float* xscale, float* yscale);
+                                                     ^
+src/monitor.c:382:54: note: Function 'glfwGetMonitorContentScale' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwGetMonitorContentScale(GLFWmonitor* handle,
+                                                     ^
+src/monitor.c:397:53: style:inconclusive: Function 'glfwGetMonitorName' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI const char* glfwGetMonitorName(GLFWmonitor* handle)
+                                                    ^
+include/GLFW/glfw3.h:2685:53: note: Function 'glfwGetMonitorName' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const char* glfwGetMonitorName(GLFWmonitor* monitor);
+                                                    ^
+src/monitor.c:397:53: note: Function 'glfwGetMonitorName' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const char* glfwGetMonitorName(GLFWmonitor* handle)
+                                                    ^
+src/monitor.c:406:53: style:inconclusive: Function 'glfwSetMonitorUserPointer' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetMonitorUserPointer(GLFWmonitor* handle, void* pointer)
+                                                    ^
+include/GLFW/glfw3.h:2711:53: note: Function 'glfwSetMonitorUserPointer' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwSetMonitorUserPointer(GLFWmonitor* monitor, void* pointer);
+                                                    ^
+src/monitor.c:406:53: note: Function 'glfwSetMonitorUserPointer' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwSetMonitorUserPointer(GLFWmonitor* handle, void* pointer)
+                                                    ^
+src/monitor.c:415:54: style:inconclusive: Function 'glfwGetMonitorUserPointer' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void* glfwGetMonitorUserPointer(GLFWmonitor* handle)
+                                                     ^
+include/GLFW/glfw3.h:2735:54: note: Function 'glfwGetMonitorUserPointer' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void* glfwGetMonitorUserPointer(GLFWmonitor* monitor);
+                                                     ^
+src/monitor.c:415:54: note: Function 'glfwGetMonitorUserPointer' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void* glfwGetMonitorUserPointer(GLFWmonitor* handle)
+                                                     ^
+src/monitor.c:424:62: style:inconclusive: Function 'glfwSetMonitorCallback' argument 1 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+GLFWAPI GLFWmonitorfun glfwSetMonitorCallback(GLFWmonitorfun cbfun)
+                                                             ^
+include/GLFW/glfw3.h:2765:62: note: Function 'glfwSetMonitorCallback' argument 1 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWmonitorfun glfwSetMonitorCallback(GLFWmonitorfun callback);
+                                                             ^
+src/monitor.c:424:62: note: Function 'glfwSetMonitorCallback' argument 1 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWmonitorfun glfwSetMonitorCallback(GLFWmonitorfun cbfun)
+                                                             ^
+src/monitor.c:431:59: style:inconclusive: Function 'glfwGetVideoModes' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI const GLFWvidmode* glfwGetVideoModes(GLFWmonitor* handle, int* count)
+                                                          ^
+include/GLFW/glfw3.h:2799:59: note: Function 'glfwGetVideoModes' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const GLFWvidmode* glfwGetVideoModes(GLFWmonitor* monitor, int* count);
+                                                          ^
+src/monitor.c:431:59: note: Function 'glfwGetVideoModes' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const GLFWvidmode* glfwGetVideoModes(GLFWmonitor* handle, int* count)
+                                                          ^
+src/monitor.c:448:58: style:inconclusive: Function 'glfwGetVideoMode' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI const GLFWvidmode* glfwGetVideoMode(GLFWmonitor* handle)
+                                                         ^
+include/GLFW/glfw3.h:2827:58: note: Function 'glfwGetVideoMode' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const GLFWvidmode* glfwGetVideoMode(GLFWmonitor* monitor);
+                                                         ^
+src/monitor.c:448:58: note: Function 'glfwGetVideoMode' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const GLFWvidmode* glfwGetVideoMode(GLFWmonitor* handle)
+                                                         ^
+src/monitor.c:459:40: style:inconclusive: Function 'glfwSetGamma' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetGamma(GLFWmonitor* handle, float gamma)
+                                       ^
+include/GLFW/glfw3.h:2860:40: note: Function 'glfwSetGamma' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwSetGamma(GLFWmonitor* monitor, float gamma);
+                                       ^
+src/monitor.c:459:40: note: Function 'glfwSetGamma' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwSetGamma(GLFWmonitor* handle, float gamma)
+                                       ^
+src/monitor.c:506:60: style:inconclusive: Function 'glfwGetGammaRamp' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI const GLFWgammaramp* glfwGetGammaRamp(GLFWmonitor* handle)
+                                                           ^
+include/GLFW/glfw3.h:2890:60: note: Function 'glfwGetGammaRamp' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const GLFWgammaramp* glfwGetGammaRamp(GLFWmonitor* monitor);
+                                                           ^
+src/monitor.c:506:60: note: Function 'glfwGetGammaRamp' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI const GLFWgammaramp* glfwGetGammaRamp(GLFWmonitor* handle)
+                                                           ^
+src/monitor.c:520:44: style:inconclusive: Function 'glfwSetGammaRamp' argument 1 names different: declaration 'monitor' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetGammaRamp(GLFWmonitor* handle, const GLFWgammaramp* ramp)
+                                           ^
+include/GLFW/glfw3.h:2931:44: note: Function 'glfwSetGammaRamp' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwSetGammaRamp(GLFWmonitor* monitor, const GLFWgammaramp* ramp);
+                                           ^
+src/monitor.c:520:44: note: Function 'glfwSetGammaRamp' argument 1 names different: declaration 'monitor' definition 'handle'.
+GLFWAPI void glfwSetGammaRamp(GLFWmonitor* handle, const GLFWgammaramp* ramp)
+                                           ^
+src/null_init.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/null_joystick.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/null_monitor.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/null_window.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/osmesa_context.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 47 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/osmesa_context.c:119:0: information: Skipping configuration '_GLFW_OSMESA_LIBRARY' since the value of '_GLFW_OSMESA_LIBRARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        _GLFW_OSMESA_LIBRARY,
+^
+src/platform.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 50 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/platform.c:60:34: style:inconclusive: Function '_glfwSelectPlatform' argument 1 names different: declaration 'platformID' definition 'desiredID'. [funcArgNamesDifferent]
+GLFWbool _glfwSelectPlatform(int desiredID, _GLFWplatform* platform)
+                                 ^
+src/internal.h:950:34: note: Function '_glfwSelectPlatform' argument 1 names different: declaration 'platformID' definition 'desiredID'.
+GLFWbool _glfwSelectPlatform(int platformID, _GLFWplatform* platform);
+                                 ^
+src/platform.c:60:34: note: Function '_glfwSelectPlatform' argument 1 names different: declaration 'platformID' definition 'desiredID'.
+GLFWbool _glfwSelectPlatform(int desiredID, _GLFWplatform* platform)
+                                 ^
+src/platform.c:124:39: style:inconclusive: Function 'glfwPlatformSupported' argument 1 names different: declaration 'platform' definition 'platformID'. [funcArgNamesDifferent]
+GLFWAPI int glfwPlatformSupported(int platformID)
+                                      ^
+include/GLFW/glfw3.h:2484:39: note: Function 'glfwPlatformSupported' argument 1 names different: declaration 'platform' definition 'platformID'.
+GLFWAPI int glfwPlatformSupported(int platform);
+                                      ^
+src/platform.c:124:39: note: Function 'glfwPlatformSupported' argument 1 names different: declaration 'platform' definition 'platformID'.
+GLFWAPI int glfwPlatformSupported(int platformID)
+                                      ^
+src/posix_module.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/posix_poll.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 46 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/posix_thread.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/posix_time.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 45 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/vulkan.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 45 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/vulkan.c:298:54: style:inconclusive: Function 'glfwCreateWindowSurface' argument 2 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+                                         GLFWwindow* handle,
+                                                     ^
+include/GLFW/glfw3.h:6395:75: note: Function 'glfwCreateWindowSurface' argument 2 names different: declaration 'window' definition 'handle'.
+GLFWAPI VkResult glfwCreateWindowSurface(VkInstance instance, GLFWwindow* window, const VkAllocationCallbacks* allocator, VkSurfaceKHR* surface);
+                                                                          ^
+src/vulkan.c:298:54: note: Function 'glfwCreateWindowSurface' argument 2 names different: declaration 'window' definition 'handle'.
+                                         GLFWwindow* handle,
+                                                     ^
+src/vulkan.c:59:0: information: Skipping configuration '_GLFW_VULKAN_LIBRARY' since the value of '_GLFW_VULKAN_LIBRARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        _glfw.vk.handle = _glfwPlatformLoadModule(_GLFW_VULKAN_LIBRARY);
+^
+src/wgl_context.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_init.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 46 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_joystick.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_module.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_monitor.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_thread.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_time.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/win32_window.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/window.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/window.c:77:51: style:inconclusive: Function '_glfwInputWindowPos' argument 2 names different: declaration 'xpos' definition 'x'. [funcArgNamesDifferent]
+void _glfwInputWindowPos(_GLFWwindow* window, int x, int y)
+                                                  ^
+src/internal.h:910:51: note: Function '_glfwInputWindowPos' argument 2 names different: declaration 'xpos' definition 'x'.
+void _glfwInputWindowPos(_GLFWwindow* window, int xpos, int ypos);
+                                                  ^
+src/window.c:77:51: note: Function '_glfwInputWindowPos' argument 2 names different: declaration 'xpos' definition 'x'.
+void _glfwInputWindowPos(_GLFWwindow* window, int x, int y)
+                                                  ^
+src/window.c:77:58: style:inconclusive: Function '_glfwInputWindowPos' argument 3 names different: declaration 'ypos' definition 'y'. [funcArgNamesDifferent]
+void _glfwInputWindowPos(_GLFWwindow* window, int x, int y)
+                                                         ^
+src/internal.h:910:61: note: Function '_glfwInputWindowPos' argument 3 names different: declaration 'ypos' definition 'y'.
+void _glfwInputWindowPos(_GLFWwindow* window, int xpos, int ypos);
+                                                            ^
+src/window.c:77:58: note: Function '_glfwInputWindowPos' argument 3 names different: declaration 'ypos' definition 'y'.
+void _glfwInputWindowPos(_GLFWwindow* window, int x, int y)
+                                                         ^
+src/window.c:467:44: style:inconclusive: Function 'glfwDestroyWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwDestroyWindow(GLFWwindow* handle)
+                                           ^
+include/GLFW/glfw3.h:3198:44: note: Function 'glfwDestroyWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwDestroyWindow(GLFWwindow* window);
+                                           ^
+src/window.c:467:44: note: Function 'glfwDestroyWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwDestroyWindow(GLFWwindow* handle)
+                                           ^
+src/window.c:500:47: style:inconclusive: Function 'glfwWindowShouldClose' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI int glfwWindowShouldClose(GLFWwindow* handle)
+                                              ^
+include/GLFW/glfw3.h:3218:47: note: Function 'glfwWindowShouldClose' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwWindowShouldClose(GLFWwindow* window);
+                                              ^
+src/window.c:500:47: note: Function 'glfwWindowShouldClose' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwWindowShouldClose(GLFWwindow* handle)
+                                              ^
+src/window.c:509:51: style:inconclusive: Function 'glfwSetWindowShouldClose' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowShouldClose(GLFWwindow* handle, int value)
+                                                  ^
+include/GLFW/glfw3.h:3240:51: note: Function 'glfwSetWindowShouldClose' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowShouldClose(GLFWwindow* window, int value);
+                                                  ^
+src/window.c:509:51: note: Function 'glfwSetWindowShouldClose' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowShouldClose(GLFWwindow* handle, int value)
+                                                  ^
+src/window.c:518:45: style:inconclusive: Function 'glfwSetWindowTitle' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowTitle(GLFWwindow* handle, const char* title)
+                                            ^
+include/GLFW/glfw3.h:3265:45: note: Function 'glfwSetWindowTitle' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowTitle(GLFWwindow* window, const char* title);
+                                            ^
+src/window.c:518:45: note: Function 'glfwSetWindowTitle' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowTitle(GLFWwindow* handle, const char* title)
+                                            ^
+src/window.c:528:44: style:inconclusive: Function 'glfwSetWindowIcon' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowIcon(GLFWwindow* handle,
+                                           ^
+include/GLFW/glfw3.h:3313:44: note: Function 'glfwSetWindowIcon' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowIcon(GLFWwindow* window, int count, const GLFWimage* images);
+                                           ^
+src/window.c:528:44: note: Function 'glfwSetWindowIcon' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowIcon(GLFWwindow* handle,
+                                           ^
+src/window.c:561:43: style:inconclusive: Function 'glfwGetWindowPos' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetWindowPos(GLFWwindow* handle, int* xpos, int* ypos)
+                                          ^
+include/GLFW/glfw3.h:3345:43: note: Function 'glfwGetWindowPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowPos(GLFWwindow* window, int* xpos, int* ypos);
+                                          ^
+src/window.c:561:43: note: Function 'glfwGetWindowPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowPos(GLFWwindow* handle, int* xpos, int* ypos)
+                                          ^
+src/window.c:575:43: style:inconclusive: Function 'glfwSetWindowPos' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowPos(GLFWwindow* handle, int xpos, int ypos)
+                                          ^
+include/GLFW/glfw3.h:3380:43: note: Function 'glfwSetWindowPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowPos(GLFWwindow* window, int xpos, int ypos);
+                                          ^
+src/window.c:575:43: note: Function 'glfwSetWindowPos' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowPos(GLFWwindow* handle, int xpos, int ypos)
+                                          ^
+src/window.c:588:44: style:inconclusive: Function 'glfwGetWindowSize' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetWindowSize(GLFWwindow* handle, int* width, int* height)
+                                           ^
+include/GLFW/glfw3.h:3410:44: note: Function 'glfwGetWindowSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowSize(GLFWwindow* window, int* width, int* height);
+                                           ^
+src/window.c:588:44: note: Function 'glfwGetWindowSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowSize(GLFWwindow* handle, int* width, int* height)
+                                           ^
+src/window.c:602:44: style:inconclusive: Function 'glfwSetWindowSize' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowSize(GLFWwindow* handle, int width, int height)
+                                           ^
+include/GLFW/glfw3.h:3537:44: note: Function 'glfwSetWindowSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowSize(GLFWwindow* window, int width, int height);
+                                           ^
+src/window.c:602:44: note: Function 'glfwSetWindowSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowSize(GLFWwindow* handle, int width, int height)
+                                           ^
+src/window.c:617:50: style:inconclusive: Function 'glfwSetWindowSizeLimits' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowSizeLimits(GLFWwindow* handle,
+                                                 ^
+include/GLFW/glfw3.h:3453:50: note: Function 'glfwSetWindowSizeLimits' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowSizeLimits(GLFWwindow* window, int minwidth, int minheight, int maxwidth, int maxheight);
+                                                 ^
+src/window.c:617:50: note: Function 'glfwSetWindowSizeLimits' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowSizeLimits(GLFWwindow* handle,
+                                                 ^
+src/window.c:662:51: style:inconclusive: Function 'glfwSetWindowAspectRatio' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowAspectRatio(GLFWwindow* handle, int numer, int denom)
+                                                  ^
+include/GLFW/glfw3.h:3496:51: note: Function 'glfwSetWindowAspectRatio' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowAspectRatio(GLFWwindow* window, int numer, int denom);
+                                                  ^
+src/window.c:662:51: note: Function 'glfwSetWindowAspectRatio' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowAspectRatio(GLFWwindow* handle, int numer, int denom)
+                                                  ^
+src/window.c:691:49: style:inconclusive: Function 'glfwGetFramebufferSize' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetFramebufferSize(GLFWwindow* handle, int* width, int* height)
+                                                ^
+include/GLFW/glfw3.h:3566:49: note: Function 'glfwGetFramebufferSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetFramebufferSize(GLFWwindow* window, int* width, int* height);
+                                                ^
+src/window.c:691:49: note: Function 'glfwGetFramebufferSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetFramebufferSize(GLFWwindow* handle, int* width, int* height)
+                                                ^
+src/window.c:705:49: style:inconclusive: Function 'glfwGetWindowFrameSize' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetWindowFrameSize(GLFWwindow* handle,
+                                                ^
+include/GLFW/glfw3.h:3603:49: note: Function 'glfwGetWindowFrameSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowFrameSize(GLFWwindow* window, int* left, int* top, int* right, int* bottom);
+                                                ^
+src/window.c:705:49: note: Function 'glfwGetWindowFrameSize' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowFrameSize(GLFWwindow* handle,
+                                                ^
+src/window.c:725:52: style:inconclusive: Function 'glfwGetWindowContentScale' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwGetWindowContentScale(GLFWwindow* handle,
+                                                   ^
+include/GLFW/glfw3.h:3636:52: note: Function 'glfwGetWindowContentScale' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowContentScale(GLFWwindow* window, float* xscale, float* yscale);
+                                                   ^
+src/window.c:725:52: note: Function 'glfwGetWindowContentScale' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwGetWindowContentScale(GLFWwindow* handle,
+                                                   ^
+src/window.c:740:48: style:inconclusive: Function 'glfwGetWindowOpacity' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI float glfwGetWindowOpacity(GLFWwindow* handle)
+                                               ^
+include/GLFW/glfw3.h:3663:48: note: Function 'glfwGetWindowOpacity' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI float glfwGetWindowOpacity(GLFWwindow* window);
+                                               ^
+src/window.c:740:48: note: Function 'glfwGetWindowOpacity' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI float glfwGetWindowOpacity(GLFWwindow* handle)
+                                               ^
+src/window.c:749:47: style:inconclusive: Function 'glfwSetWindowOpacity' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowOpacity(GLFWwindow* handle, float opacity)
+                                              ^
+include/GLFW/glfw3.h:3695:47: note: Function 'glfwSetWindowOpacity' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowOpacity(GLFWwindow* window, float opacity);
+                                              ^
+src/window.c:749:47: note: Function 'glfwSetWindowOpacity' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowOpacity(GLFWwindow* handle, float opacity)
+                                              ^
+src/window.c:768:44: style:inconclusive: Function 'glfwIconifyWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwIconifyWindow(GLFWwindow* handle)
+                                           ^
+include/GLFW/glfw3.h:3727:44: note: Function 'glfwIconifyWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwIconifyWindow(GLFWwindow* window);
+                                           ^
+src/window.c:768:44: note: Function 'glfwIconifyWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwIconifyWindow(GLFWwindow* handle)
+                                           ^
+src/window.c:777:44: style:inconclusive: Function 'glfwRestoreWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwRestoreWindow(GLFWwindow* handle)
+                                           ^
+include/GLFW/glfw3.h:3754:44: note: Function 'glfwRestoreWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwRestoreWindow(GLFWwindow* window);
+                                           ^
+src/window.c:777:44: note: Function 'glfwRestoreWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwRestoreWindow(GLFWwindow* handle)
+                                           ^
+src/window.c:786:45: style:inconclusive: Function 'glfwMaximizeWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwMaximizeWindow(GLFWwindow* handle)
+                                            ^
+include/GLFW/glfw3.h:3779:45: note: Function 'glfwMaximizeWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwMaximizeWindow(GLFWwindow* window);
+                                            ^
+src/window.c:786:45: note: Function 'glfwMaximizeWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwMaximizeWindow(GLFWwindow* handle)
+                                            ^
+src/window.c:799:41: style:inconclusive: Function 'glfwShowWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwShowWindow(GLFWwindow* handle)
+                                        ^
+include/GLFW/glfw3.h:3811:41: note: Function 'glfwShowWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwShowWindow(GLFWwindow* window);
+                                        ^
+src/window.c:799:41: note: Function 'glfwShowWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwShowWindow(GLFWwindow* handle)
+                                        ^
+src/window.c:815:53: style:inconclusive: Function 'glfwRequestWindowAttention' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwRequestWindowAttention(GLFWwindow* handle)
+                                                    ^
+include/GLFW/glfw3.h:3899:53: note: Function 'glfwRequestWindowAttention' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwRequestWindowAttention(GLFWwindow* window);
+                                                    ^
+src/window.c:815:53: note: Function 'glfwRequestWindowAttention' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwRequestWindowAttention(GLFWwindow* handle)
+                                                    ^
+src/window.c:825:41: style:inconclusive: Function 'glfwHideWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwHideWindow(GLFWwindow* handle)
+                                        ^
+include/GLFW/glfw3.h:3833:41: note: Function 'glfwHideWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwHideWindow(GLFWwindow* window);
+                                        ^
+src/window.c:825:41: note: Function 'glfwHideWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwHideWindow(GLFWwindow* handle)
+                                        ^
+src/window.c:838:42: style:inconclusive: Function 'glfwFocusWindow' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwFocusWindow(GLFWwindow* handle)
+                                         ^
+include/GLFW/glfw3.h:3872:42: note: Function 'glfwFocusWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwFocusWindow(GLFWwindow* window);
+                                         ^
+src/window.c:838:42: note: Function 'glfwFocusWindow' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwFocusWindow(GLFWwindow* handle)
+                                         ^
+src/window.c:848:45: style:inconclusive: Function 'glfwGetWindowAttrib' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI int glfwGetWindowAttrib(GLFWwindow* handle, int attrib)
+                                            ^
+include/GLFW/glfw3.h:4017:45: note: Function 'glfwGetWindowAttrib' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetWindowAttrib(GLFWwindow* window, int attrib);
+                                            ^
+src/window.c:848:45: note: Function 'glfwGetWindowAttrib' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI int glfwGetWindowAttrib(GLFWwindow* handle, int attrib)
+                                            ^
+src/window.c:911:46: style:inconclusive: Function 'glfwSetWindowAttrib' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowAttrib(GLFWwindow* handle, int attrib, int value)
+                                             ^
+include/GLFW/glfw3.h:4056:46: note: Function 'glfwSetWindowAttrib' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowAttrib(GLFWwindow* window, int attrib, int value);
+                                             ^
+src/window.c:911:46: note: Function 'glfwSetWindowAttrib' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowAttrib(GLFWwindow* handle, int attrib, int value)
+                                             ^
+src/window.c:957:55: style:inconclusive: Function 'glfwGetWindowMonitor' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWmonitor* glfwGetWindowMonitor(GLFWwindow* handle)
+                                                      ^
+include/GLFW/glfw3.h:3921:55: note: Function 'glfwGetWindowMonitor' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWmonitor* glfwGetWindowMonitor(GLFWwindow* window);
+                                                      ^
+src/window.c:957:55: note: Function 'glfwGetWindowMonitor' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWmonitor* glfwGetWindowMonitor(GLFWwindow* handle)
+                                                      ^
+src/window.c:966:47: style:inconclusive: Function 'glfwSetWindowMonitor' argument 1 names different: declaration 'window' definition 'wh'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowMonitor(GLFWwindow* wh,
+                                              ^
+include/GLFW/glfw3.h:3980:47: note: Function 'glfwSetWindowMonitor' argument 1 names different: declaration 'window' definition 'wh'.
+GLFWAPI void glfwSetWindowMonitor(GLFWwindow* window, GLFWmonitor* monitor, int xpos, int ypos, int width, int height, int refreshRate);
+                                              ^
+src/window.c:966:47: note: Function 'glfwSetWindowMonitor' argument 1 names different: declaration 'window' definition 'wh'.
+GLFWAPI void glfwSetWindowMonitor(GLFWwindow* wh,
+                                              ^
+src/window.c:967:48: style:inconclusive: Function 'glfwSetWindowMonitor' argument 2 names different: declaration 'monitor' definition 'mh'. [funcArgNamesDifferent]
+                                  GLFWmonitor* mh,
+                                               ^
+include/GLFW/glfw3.h:3980:68: note: Function 'glfwSetWindowMonitor' argument 2 names different: declaration 'monitor' definition 'mh'.
+GLFWAPI void glfwSetWindowMonitor(GLFWwindow* window, GLFWmonitor* monitor, int xpos, int ypos, int width, int height, int refreshRate);
+                                                                   ^
+src/window.c:967:48: note: Function 'glfwSetWindowMonitor' argument 2 names different: declaration 'monitor' definition 'mh'.
+                                  GLFWmonitor* mh,
+                                               ^
+src/window.c:1005:51: style:inconclusive: Function 'glfwSetWindowUserPointer' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void glfwSetWindowUserPointer(GLFWwindow* handle, void* pointer)
+                                                  ^
+include/GLFW/glfw3.h:4079:51: note: Function 'glfwSetWindowUserPointer' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowUserPointer(GLFWwindow* window, void* pointer);
+                                                  ^
+src/window.c:1005:51: note: Function 'glfwSetWindowUserPointer' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void glfwSetWindowUserPointer(GLFWwindow* handle, void* pointer)
+                                                  ^
+src/window.c:1014:52: style:inconclusive: Function 'glfwGetWindowUserPointer' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI void* glfwGetWindowUserPointer(GLFWwindow* handle)
+                                                   ^
+include/GLFW/glfw3.h:4100:52: note: Function 'glfwGetWindowUserPointer' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void* glfwGetWindowUserPointer(GLFWwindow* window);
+                                                   ^
+src/window.c:1014:52: note: Function 'glfwGetWindowUserPointer' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI void* glfwGetWindowUserPointer(GLFWwindow* handle)
+                                                   ^
+src/window.c:1023:63: style:inconclusive: Function 'glfwSetWindowPosCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* handle,
+                                                              ^
+include/GLFW/glfw3.h:4135:63: note: Function 'glfwSetWindowPosCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* window, GLFWwindowposfun callback);
+                                                              ^
+src/window.c:1023:63: note: Function 'glfwSetWindowPosCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* handle,
+                                                              ^
+src/window.c:1024:68: style:inconclusive: Function 'glfwSetWindowPosCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                  GLFWwindowposfun cbfun)
+                                                                   ^
+include/GLFW/glfw3.h:4135:88: note: Function 'glfwSetWindowPosCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* window, GLFWwindowposfun callback);
+                                                                                       ^
+src/window.c:1024:68: note: Function 'glfwSetWindowPosCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                  GLFWwindowposfun cbfun)
+                                                                   ^
+src/window.c:1034:65: style:inconclusive: Function 'glfwSetWindowSizeCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* handle,
+                                                                ^
+include/GLFW/glfw3.h:4167:65: note: Function 'glfwSetWindowSizeCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* window, GLFWwindowsizefun callback);
+                                                                ^
+src/window.c:1034:65: note: Function 'glfwSetWindowSizeCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* handle,
+                                                                ^
+src/window.c:1035:71: style:inconclusive: Function 'glfwSetWindowSizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                    GLFWwindowsizefun cbfun)
+                                                                      ^
+include/GLFW/glfw3.h:4167:91: note: Function 'glfwSetWindowSizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* window, GLFWwindowsizefun callback);
+                                                                                          ^
+src/window.c:1035:71: note: Function 'glfwSetWindowSizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                    GLFWwindowsizefun cbfun)
+                                                                      ^
+src/window.c:1045:67: style:inconclusive: Function 'glfwSetWindowCloseCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowclosefun glfwSetWindowCloseCallback(GLFWwindow* handle,
+                                                                  ^
+include/GLFW/glfw3.h:4207:67: note: Function 'glfwSetWindowCloseCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowclosefun glfwSetWindowCloseCallback(GLFWwindow* window, GLFWwindowclosefun callback);
+                                                                  ^
+src/window.c:1045:67: note: Function 'glfwSetWindowCloseCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowclosefun glfwSetWindowCloseCallback(GLFWwindow* handle,
+                                                                  ^
+src/window.c:1046:74: style:inconclusive: Function 'glfwSetWindowCloseCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                      GLFWwindowclosefun cbfun)
+                                                                         ^
+include/GLFW/glfw3.h:4207:94: note: Function 'glfwSetWindowCloseCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowclosefun glfwSetWindowCloseCallback(GLFWwindow* window, GLFWwindowclosefun callback);
+                                                                                             ^
+src/window.c:1046:74: note: Function 'glfwSetWindowCloseCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                      GLFWwindowclosefun cbfun)
+                                                                         ^
+src/window.c:1056:71: style:inconclusive: Function 'glfwSetWindowRefreshCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowrefreshfun glfwSetWindowRefreshCallback(GLFWwindow* handle,
+                                                                      ^
+include/GLFW/glfw3.h:4243:71: note: Function 'glfwSetWindowRefreshCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowrefreshfun glfwSetWindowRefreshCallback(GLFWwindow* window, GLFWwindowrefreshfun callback);
+                                                                      ^
+src/window.c:1056:71: note: Function 'glfwSetWindowRefreshCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowrefreshfun glfwSetWindowRefreshCallback(GLFWwindow* handle,
+                                                                      ^
+src/window.c:1057:80: style:inconclusive: Function 'glfwSetWindowRefreshCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                          GLFWwindowrefreshfun cbfun)
+                                                                               ^
+include/GLFW/glfw3.h:4243:100: note: Function 'glfwSetWindowRefreshCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowrefreshfun glfwSetWindowRefreshCallback(GLFWwindow* window, GLFWwindowrefreshfun callback);
+                                                                                                   ^
+src/window.c:1057:80: note: Function 'glfwSetWindowRefreshCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                          GLFWwindowrefreshfun cbfun)
+                                                                               ^
+src/window.c:1067:67: style:inconclusive: Function 'glfwSetWindowFocusCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowfocusfun glfwSetWindowFocusCallback(GLFWwindow* handle,
+                                                                  ^
+include/GLFW/glfw3.h:4278:67: note: Function 'glfwSetWindowFocusCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowfocusfun glfwSetWindowFocusCallback(GLFWwindow* window, GLFWwindowfocusfun callback);
+                                                                  ^
+src/window.c:1067:67: note: Function 'glfwSetWindowFocusCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowfocusfun glfwSetWindowFocusCallback(GLFWwindow* handle,
+                                                                  ^
+src/window.c:1068:74: style:inconclusive: Function 'glfwSetWindowFocusCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                      GLFWwindowfocusfun cbfun)
+                                                                         ^
+include/GLFW/glfw3.h:4278:94: note: Function 'glfwSetWindowFocusCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowfocusfun glfwSetWindowFocusCallback(GLFWwindow* window, GLFWwindowfocusfun callback);
+                                                                                             ^
+src/window.c:1068:74: note: Function 'glfwSetWindowFocusCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                      GLFWwindowfocusfun cbfun)
+                                                                         ^
+src/window.c:1078:71: style:inconclusive: Function 'glfwSetWindowIconifyCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowiconifyfun glfwSetWindowIconifyCallback(GLFWwindow* handle,
+                                                                      ^
+include/GLFW/glfw3.h:4308:71: note: Function 'glfwSetWindowIconifyCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowiconifyfun glfwSetWindowIconifyCallback(GLFWwindow* window, GLFWwindowiconifyfun callback);
+                                                                      ^
+src/window.c:1078:71: note: Function 'glfwSetWindowIconifyCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowiconifyfun glfwSetWindowIconifyCallback(GLFWwindow* handle,
+                                                                      ^
+src/window.c:1079:80: style:inconclusive: Function 'glfwSetWindowIconifyCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                          GLFWwindowiconifyfun cbfun)
+                                                                               ^
+include/GLFW/glfw3.h:4308:100: note: Function 'glfwSetWindowIconifyCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowiconifyfun glfwSetWindowIconifyCallback(GLFWwindow* window, GLFWwindowiconifyfun callback);
+                                                                                                   ^
+src/window.c:1079:80: note: Function 'glfwSetWindowIconifyCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                          GLFWwindowiconifyfun cbfun)
+                                                                               ^
+src/window.c:1089:73: style:inconclusive: Function 'glfwSetWindowMaximizeCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowmaximizefun glfwSetWindowMaximizeCallback(GLFWwindow* handle,
+                                                                        ^
+include/GLFW/glfw3.h:4338:73: note: Function 'glfwSetWindowMaximizeCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowmaximizefun glfwSetWindowMaximizeCallback(GLFWwindow* window, GLFWwindowmaximizefun callback);
+                                                                        ^
+src/window.c:1089:73: note: Function 'glfwSetWindowMaximizeCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowmaximizefun glfwSetWindowMaximizeCallback(GLFWwindow* handle,
+                                                                        ^
+src/window.c:1090:83: style:inconclusive: Function 'glfwSetWindowMaximizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                            GLFWwindowmaximizefun cbfun)
+                                                                                  ^
+include/GLFW/glfw3.h:4338:103: note: Function 'glfwSetWindowMaximizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowmaximizefun glfwSetWindowMaximizeCallback(GLFWwindow* window, GLFWwindowmaximizefun callback);
+                                                                                                      ^
+src/window.c:1090:83: note: Function 'glfwSetWindowMaximizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                            GLFWwindowmaximizefun cbfun)
+                                                                                  ^
+src/window.c:1100:75: style:inconclusive: Function 'glfwSetFramebufferSizeCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWframebuffersizefun glfwSetFramebufferSizeCallback(GLFWwindow* handle,
+                                                                          ^
+include/GLFW/glfw3.h:4368:75: note: Function 'glfwSetFramebufferSizeCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWframebuffersizefun glfwSetFramebufferSizeCallback(GLFWwindow* window, GLFWframebuffersizefun callback);
+                                                                          ^
+src/window.c:1100:75: note: Function 'glfwSetFramebufferSizeCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWframebuffersizefun glfwSetFramebufferSizeCallback(GLFWwindow* handle,
+                                                                          ^
+src/window.c:1101:86: style:inconclusive: Function 'glfwSetFramebufferSizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                              GLFWframebuffersizefun cbfun)
+                                                                                     ^
+include/GLFW/glfw3.h:4368:106: note: Function 'glfwSetFramebufferSizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWframebuffersizefun glfwSetFramebufferSizeCallback(GLFWwindow* window, GLFWframebuffersizefun callback);
+                                                                                                         ^
+src/window.c:1101:86: note: Function 'glfwSetFramebufferSizeCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                              GLFWframebuffersizefun cbfun)
+                                                                                     ^
+src/window.c:1111:81: style:inconclusive: Function 'glfwSetWindowContentScaleCallback' argument 1 names different: declaration 'window' definition 'handle'. [funcArgNamesDifferent]
+GLFWAPI GLFWwindowcontentscalefun glfwSetWindowContentScaleCallback(GLFWwindow* handle,
+                                                                                ^
+include/GLFW/glfw3.h:4399:81: note: Function 'glfwSetWindowContentScaleCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowcontentscalefun glfwSetWindowContentScaleCallback(GLFWwindow* window, GLFWwindowcontentscalefun callback);
+                                                                                ^
+src/window.c:1111:81: note: Function 'glfwSetWindowContentScaleCallback' argument 1 names different: declaration 'window' definition 'handle'.
+GLFWAPI GLFWwindowcontentscalefun glfwSetWindowContentScaleCallback(GLFWwindow* handle,
+                                                                                ^
+src/window.c:1112:95: style:inconclusive: Function 'glfwSetWindowContentScaleCallback' argument 2 names different: declaration 'callback' definition 'cbfun'. [funcArgNamesDifferent]
+                                                                    GLFWwindowcontentscalefun cbfun)
+                                                                                              ^
+include/GLFW/glfw3.h:4399:115: note: Function 'glfwSetWindowContentScaleCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+GLFWAPI GLFWwindowcontentscalefun glfwSetWindowContentScaleCallback(GLFWwindow* window, GLFWwindowcontentscalefun callback);
+                                                                                                                  ^
+src/window.c:1112:95: note: Function 'glfwSetWindowContentScaleCallback' argument 2 names different: declaration 'callback' definition 'cbfun'.
+                                                                    GLFWwindowcontentscalefun cbfun)
+                                                                                              ^
+src/wl_init.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 45 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/wl_init.c:785:0: information: Skipping configuration 'WL_KEYBOARD_REPEAT_INFO_SINCE_VERSION;_GLFW_WAYLAND' since the value of 'WL_KEYBOARD_REPEAT_INFO_SINCE_VERSION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    if (wl_seat_get_version(_glfw.wl.seat) >= WL_KEYBOARD_REPEAT_INFO_SINCE_VERSION)
+^
+src/wl_monitor.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/wl_monitor.c:177:0: information: Skipping configuration 'WL_OUTPUT_NAME_SINCE_VERSION;_GLFW_WAYLAND' since the value of 'WL_OUTPUT_NAME_SINCE_VERSION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    version = _glfw_min(version, WL_OUTPUT_NAME_SINCE_VERSION);
+^
+src/wl_monitor.c:241:68: style:inconclusive: Function '_glfwGetVideoModesWayland' argument 2 names different: declaration 'count' definition 'found'. [funcArgNamesDifferent]
+GLFWvidmode* _glfwGetVideoModesWayland(_GLFWmonitor* monitor, int* found)
+                                                                   ^
+src/wl_platform.h:676:68: note: Function '_glfwGetVideoModesWayland' argument 2 names different: declaration 'count' definition 'found'.
+GLFWvidmode* _glfwGetVideoModesWayland(_GLFWmonitor* monitor, int* count);
+                                                                   ^
+src/wl_monitor.c:241:68: note: Function '_glfwGetVideoModesWayland' argument 2 names different: declaration 'count' definition 'found'.
+GLFWvidmode* _glfwGetVideoModesWayland(_GLFWmonitor* monitor, int* found)
+                                                                   ^
+src/wl_window.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 47 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/wl_window.c:1896:28: warning: Possible null pointer dereference: window [nullPointer]
+            if (surface == window->wl.surface && _glfw.wl.offers[i].text_uri_list)
+                           ^
+src/wl_window.c:1888:35: note: Assignment 'window=NULL', assigned value is 0
+            _GLFWwindow* window = NULL;
+                                  ^
+src/wl_window.c:1890:17: note: Assuming condition is false
+            if (surface)
+                ^
+src/wl_window.c:1896:28: note: Null pointer dereference
+            if (surface == window->wl.surface && _glfw.wl.offers[i].text_uri_list)
+                           ^
+src/wl_window.c:2543:59: style:inconclusive: Function '_glfwSetCursorPosWayland' argument 2 names different: declaration 'xpos' definition 'x'. [funcArgNamesDifferent]
+void _glfwSetCursorPosWayland(_GLFWwindow* window, double x, double y)
+                                                          ^
+src/wl_platform.h:653:59: note: Function '_glfwSetCursorPosWayland' argument 2 names different: declaration 'xpos' definition 'x'.
+void _glfwSetCursorPosWayland(_GLFWwindow* window, double xpos, double ypos);
+                                                          ^
+src/wl_window.c:2543:59: note: Function '_glfwSetCursorPosWayland' argument 2 names different: declaration 'xpos' definition 'x'.
+void _glfwSetCursorPosWayland(_GLFWwindow* window, double x, double y)
+                                                          ^
+src/wl_window.c:2543:69: style:inconclusive: Function '_glfwSetCursorPosWayland' argument 3 names different: declaration 'ypos' definition 'y'. [funcArgNamesDifferent]
+void _glfwSetCursorPosWayland(_GLFWwindow* window, double x, double y)
+                                                                    ^
+src/wl_platform.h:653:72: note: Function '_glfwSetCursorPosWayland' argument 3 names different: declaration 'ypos' definition 'y'.
+void _glfwSetCursorPosWayland(_GLFWwindow* window, double xpos, double ypos);
+                                                                       ^
+src/wl_window.c:2543:69: note: Function '_glfwSetCursorPosWayland' argument 3 names different: declaration 'ypos' definition 'y'.
+void _glfwSetCursorPosWayland(_GLFWwindow* window, double x, double y)
+                                                                    ^
+src/wl_window.c:109:0: information: Skipping configuration 'SHM_ANON;_GLFW_WAYLAND' since the value of 'SHM_ANON' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    fd = shm_open(SHM_ANON, O_RDWR | O_CLOEXEC, 0600);
+^
+src/x11_init.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 46 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/x11_init.c:982:9: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+        snprintf(name, sizeof(name), "_NET_WM_CM_S%u", _glfw.x11.screen);
+        ^
+src/x11_init.c:450:35: warning:inconclusive: Possible null pointer dereference: styles [nullPointer]
+    for (unsigned int i = 0;  i < styles->count_styles;  i++)
+                                  ^
+src/x11_init.c:445:25: note: Assignment 'styles=NULL', assigned value is 0
+    XIMStyles* styles = NULL;
+                        ^
+src/x11_init.c:447:70: note: Assuming condition is false
+    if (XGetIMValues(_glfw.x11.im, XNQueryInputStyle, &styles, NULL) != NULL)
+                                                                     ^
+src/x11_init.c:450:35: note: Null pointer dereference
+    for (unsigned int i = 0;  i < styles->count_styles;  i++)
+                                  ^
+src/x11_monitor.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/x11_window.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/x11_window.c:2851:55: style:inconclusive: Function '_glfwSetCursorPosX11' argument 2 names different: declaration 'xpos' definition 'x'. [funcArgNamesDifferent]
+void _glfwSetCursorPosX11(_GLFWwindow* window, double x, double y)
+                                                      ^
+src/x11_platform.h:947:55: note: Function '_glfwSetCursorPosX11' argument 2 names different: declaration 'xpos' definition 'x'.
+void _glfwSetCursorPosX11(_GLFWwindow* window, double xpos, double ypos);
+                                                      ^
+src/x11_window.c:2851:55: note: Function '_glfwSetCursorPosX11' argument 2 names different: declaration 'xpos' definition 'x'.
+void _glfwSetCursorPosX11(_GLFWwindow* window, double x, double y)
+                                                      ^
+src/x11_window.c:2851:65: style:inconclusive: Function '_glfwSetCursorPosX11' argument 3 names different: declaration 'ypos' definition 'y'. [funcArgNamesDifferent]
+void _glfwSetCursorPosX11(_GLFWwindow* window, double x, double y)
+                                                                ^
+src/x11_platform.h:947:68: note: Function '_glfwSetCursorPosX11' argument 3 names different: declaration 'ypos' definition 'y'.
+void _glfwSetCursorPosX11(_GLFWwindow* window, double xpos, double ypos);
+                                                                   ^
+src/x11_window.c:2851:65: note: Function '_glfwSetCursorPosX11' argument 3 names different: declaration 'ypos' definition 'y'.
+void _glfwSetCursorPosX11(_GLFWwindow* window, double x, double y)
+                                                                ^
+src/x11_window.c:2629:23: style: struct member 'Anonymous41::functions' is never used. [unusedStructMember]
+        unsigned long functions;
+                      ^
+src/x11_window.c:2631:14: style: struct member 'Anonymous41::input_mode' is never used. [unusedStructMember]
+        long input_mode;
+             ^
+src/x11_window.c:2632:23: style: struct member 'Anonymous41::status' is never used. [unusedStructMember]
+        unsigned long status;
+                      ^
+src/xkb_unicode.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 43 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/xkb_unicode.c:915:9: style: The scope of the variable 'mid' can be reduced. [variableScope]
+    int mid;
+        ^
+tests/allocator.c:66:5: error: Memory leak: real_block [memleak]
+    return real_block + 1;
+    ^
+tests/allocator.c:98:5: error: Common realloc mistake: 'real_block' nulled but not freed upon failure [memleakOnRealloc]
+    real_block = realloc(real_block, size + sizeof(size_t));
+    ^
+tests/cursor.c:460:23: style: Local variable 'i' shadows outer variable [shadowVariable]
+            const int i = (int) (glfwGetTime() * 30.0) % CURSOR_FRAME_COUNT;
+                      ^
+tests/cursor.c:329:9: note: Shadowed declaration
+    int i;
+        ^
+tests/cursor.c:460:23: note: Shadow variable
+            const int i = (int) (glfwGetTime() * 30.0) % CURSOR_FRAME_COUNT;
+                      ^
+tests/gamma.c:78:17: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+                snprintf(buffer, sizeof(buffer), "#%u: %u (%0.5f) ",
+                ^
+tests/gamma.c:75:18: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+            char buffer[1024];
+                 ^
+tests/glfwinfo.c:326:5: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("GLFW library version: %u.%u.%u\n", major, minor, revision);
+    ^
+tests/glfwinfo.c:326:5: warning: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("GLFW library version: %u.%u.%u\n", major, minor, revision);
+    ^
+tests/glfwinfo.c:326:5: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("GLFW library version: %u.%u.%u\n", major, minor, revision);
+    ^
+tests/glfwinfo.c:736:9: warning: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+        printf("%s context version parsed by GLFW: %u.%u.%u\n",
+        ^
+tests/glfwinfo.c:736:9: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+        printf("%s context version parsed by GLFW: %u.%u.%u\n",
+        ^
+tests/glfwinfo.c:736:9: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+        printf("%s context version parsed by GLFW: %u.%u.%u\n",
+        ^
+tests/glfwinfo.c:964:13: error: Common realloc mistake: 're' nulled but not freed upon failure [memleakOnRealloc]
+            re = realloc((void*) re, sizeof(char*) * re_count);
+            ^
+tests/glfwinfo.c:1031:22: style: Local variable 'ep_count' shadows outer variable [shadowVariable]
+            uint32_t ep_count;
+                     ^
+tests/glfwinfo.c:943:18: note: Shadowed declaration
+        uint32_t ep_count;
+                 ^
+tests/glfwinfo.c:1031:22: note: Shadow variable
+            uint32_t ep_count;
+                     ^
+tests/glfwinfo.c:1033:36: style: Local variable 'ep' shadows outer variable [shadowVariable]
+            VkExtensionProperties* ep = calloc(ep_count, sizeof(VkExtensionProperties));
+                                   ^
+tests/glfwinfo.c:945:32: note: Shadowed declaration
+        VkExtensionProperties* ep = calloc(ep_count, sizeof(VkExtensionProperties));
+                               ^
+tests/glfwinfo.c:1033:36: note: Shadow variable
+            VkExtensionProperties* ep = calloc(ep_count, sizeof(VkExtensionProperties));
+                                   ^
+tests/inputlag.c:157:23: style: The scope of the variable 'current_time' can be reduced. [variableScope]
+    double last_time, current_time;
+                      ^
+tests/inputlag.c:230:13: style: Local variable 'width' shadows outer variable [shadowVariable]
+        int width, height;
+            ^
+tests/inputlag.c:155:13: note: Shadowed declaration
+    int ch, width, height;
+            ^
+tests/inputlag.c:230:13: note: Shadow variable
+        int width, height;
+            ^
+tests/inputlag.c:230:20: style: Local variable 'height' shadows outer variable [shadowVariable]
+        int width, height;
+                   ^
+tests/inputlag.c:155:20: note: Shadowed declaration
+    int ch, width, height;
+                   ^
+tests/inputlag.c:230:20: note: Shadow variable
+        int width, height;
+                   ^
+tests/monitors.c:137:17: style: The scope of the variable 'window' can be reduced. [variableScope]
+    GLFWwindow* window;
+                ^
+tests/reopen.c:105:12: style: The scope of the variable 'base' can be reduced. [variableScope]
+    double base;
+           ^
+tests/reopen.c:106:17: style: The scope of the variable 'window' can be reduced. [variableScope]
+    GLFWwindow* window;
+                ^
+tests/reopen.c:201:17: style: Local variable 'width' shadows outer variable [shadowVariable]
+            int width, height;
+                ^
+tests/reopen.c:120:13: note: Shadowed declaration
+        int width, height;
+            ^
+tests/reopen.c:201:17: note: Shadow variable
+            int width, height;
+                ^
+tests/reopen.c:201:24: style: Local variable 'height' shadows outer variable [shadowVariable]
+            int width, height;
+                       ^
+tests/reopen.c:120:20: note: Shadowed declaration
+        int width, height;
+                   ^
+tests/reopen.c:201:24: note: Shadow variable
+            int width, height;
+                       ^
+tests/tearing.c:106:35: warning: Invalid test for overflow 'swap_interval+1>swap_interval'; signed integer overflow is undefined behavior. Some mainstream compilers remove such overflow tests when optimising the code and assume it's always true. [invalidTestForOverflow]
+            if (swap_interval + 1 > swap_interval)
+                                  ^
+tests/tearing.c:115:39: warning: Invalid test for overflow 'swap_interval-1<swap_interval'; signed integer overflow is undefined behavior. Some mainstream compilers remove such overflow tests when optimising the code and assume it's always true. [invalidTestForOverflow]
+                if (swap_interval - 1 < swap_interval)
+                                      ^
+tests/tearing.c:159:23: style: The scope of the variable 'current_time' can be reduced. [variableScope]
+    double last_time, current_time;
+                      ^
+tests/tearing.c:44:11: style: struct member 'Anonymous0::x' is never used. [unusedStructMember]
+    float x, y;
+          ^
+tests/tearing.c:44:14: style: struct member 'Anonymous0::y' is never used. [unusedStructMember]
+    float x, y;
+             ^
+tests/triangle-vulkan.c:248:9: error: Memory leak: message [memleak]
+        return false;
+        ^
+tests/triangle-vulkan.c:1569:14: style: The scope of the variable 'validation_layer_count' can be reduced. [variableScope]
+    uint32_t validation_layer_count = 0;
+             ^
+tests/triangle-vulkan.c:1575:11: style: The scope of the variable 'instance_validation_layers_alt1' can be reduced. [variableScope]
+    char *instance_validation_layers_alt1[] = {
+          ^
+tests/triangle-vulkan.c:1579:11: style: The scope of the variable 'instance_validation_layers_alt2' can be reduced. [variableScope]
+    char *instance_validation_layers_alt2[] = {
+          ^
+tests/triangle-vulkan.c:1430:24: style: Variable 'attachments[0]' is assigned a value that is never used. [unreadVariable]
+        attachments[0] = demo->buffers[i].view;
+                       ^
+src/win32_init.c:65:0: style: The function 'DllMain' is never used. [unusedFunction]
+
+^
+src/input.c:502:0: style: The function '_glfwAllocJoystick' is never used. [unusedFunction]
+
+^
+src/wl_init.c:389:0: style: The function '_glfwConnectWayland' is never used. [unusedFunction]
+
+^
+src/win32_init.c:604:0: style: The function '_glfwConnectWin32' is never used. [unusedFunction]
+
+^
+src/x11_init.c:1167:0: style: The function '_glfwConnectX11' is never used. [unusedFunction]
+
+^
+src/win32_init.c:470:0: style: The function '_glfwCreateUTF8FromWideStringWin32' is never used. [unusedFunction]
+
+^
+src/win32_init.c:442:0: style: The function '_glfwCreateWideStringFromUTF8Win32' is never used. [unusedFunction]
+
+^
+src/input.c:538:0: style: The function '_glfwFreeJoystick' is never used. [unusedFunction]
+
+^
+src/input.c:418:0: style: The function '_glfwInputJoystick' is never used. [unusedFunction]
+
+^
+src/input.c:434:0: style: The function '_glfwInputJoystickAxis' is never used. [unusedFunction]
+
+^
+src/input.c:445:0: style: The function '_glfwInputJoystickButton' is never used. [unusedFunction]
+
+^
+src/input.c:457:0: style: The function '_glfwInputJoystickHat' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:211:0: style: The function 'cnd_broadcast' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:169:0: style: The function 'cnd_destroy' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:285:0: style: The function 'cnd_wait' is never used. [unusedFunction]
+
+^
+src/window.c:838:0: style: The function 'glfwFocusWindow' is never used. [unusedFunction]
+
+^
+src/context.c:642:0: style: The function 'glfwGetCurrentContext' is never used. [unusedFunction]
+
+^
+src/egl_context.c:882:0: style: The function 'glfwGetEGLContext' is never used. [unusedFunction]
+
+^
+src/egl_context.c:876:0: style: The function 'glfwGetEGLDisplay' is never used. [unusedFunction]
+
+^
+src/egl_context.c:896:0: style: The function 'glfwGetEGLSurface' is never used. [unusedFunction]
+
+^
+src/input.c:1222:0: style: The function 'glfwGetJoystickUserPointer' is never used. [unusedFunction]
+
+^
+src/input.c:717:0: style: The function 'glfwGetKeyScancode' is never used. [unusedFunction]
+
+^
+src/monitor.c:415:0: style: The function 'glfwGetMonitorUserPointer' is never used. [unusedFunction]
+
+^
+src/input.c:753:0: style: The function 'glfwGetMouseButton' is never used. [unusedFunction]
+
+^
+src/osmesa_context.c:297:0: style: The function 'glfwGetOSMesaColorBuffer' is never used. [unusedFunction]
+
+^
+src/osmesa_context.c:373:0: style: The function 'glfwGetOSMesaContext' is never used. [unusedFunction]
+
+^
+src/osmesa_context.c:334:0: style: The function 'glfwGetOSMesaDepthBuffer' is never used. [unusedFunction]
+
+^
+src/input.c:1495:0: style: The function 'glfwGetTimerFrequency' is never used. [unusedFunction]
+
+^
+src/wl_window.c:3154:0: style: The function 'glfwGetWaylandDisplay' is never used. [unusedFunction]
+
+^
+src/wl_monitor.c:270:0: style: The function 'glfwGetWaylandMonitor' is never used. [unusedFunction]
+
+^
+src/wl_window.c:3168:0: style: The function 'glfwGetWaylandWindow' is never used. [unusedFunction]
+
+^
+src/x11_monitor.c:605:0: style: The function 'glfwGetX11Adapter' is never used. [unusedFunction]
+
+^
+src/x11_window.c:3288:0: style: The function 'glfwGetX11Display' is never used. [unusedFunction]
+
+^
+src/x11_monitor.c:612:0: style: The function 'glfwGetX11Monitor' is never used. [unusedFunction]
+
+^
+src/x11_window.c:3341:0: style: The function 'glfwGetX11SelectionString' is never used. [unusedFunction]
+
+^
+src/x11_window.c:3301:0: style: The function 'glfwGetX11Window' is never used. [unusedFunction]
+
+^
+src/init.c:507:0: style: The function 'glfwInitVulkanLoader' is never used. [unusedFunction]
+
+^
+src/input.c:961:0: style: The function 'glfwSetCharModsCallback' is never used. [unusedFunction]
+
+^
+src/input.c:1206:0: style: The function 'glfwSetJoystickUserPointer' is never used. [unusedFunction]
+
+^
+src/monitor.c:406:0: style: The function 'glfwSetMonitorUserPointer' is never used. [unusedFunction]
+
+^
+src/x11_window.c:3315:0: style: The function 'glfwSetX11SelectionString' is never used. [unusedFunction]
+
+^
+src/window.c:438:0: style: The function 'glfwWindowHintString' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:77:0: style: The function 'mtx_destroy' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:101:0: style: The function 'mtx_timedlock' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:109:0: style: The function 'mtx_trylock' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:393:0: style: The function 'thrd_current' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:402:0: style: The function 'thrd_detach' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:409:0: style: The function 'thrd_equal' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:418:0: style: The function 'thrd_exit' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:512:0: style: The function 'thrd_yield' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:521:0: style: The function 'tss_create' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:543:0: style: The function 'tss_delete' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:552:0: style: The function 'tss_get' is never used. [unusedFunction]
+
+^
+deps/tinycthread.c:561:0: style: The function 'tss_set' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
